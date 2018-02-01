@@ -57,7 +57,7 @@ class InteractiveRecord
     value = attribute_hash.values[0]
     attribute = attribute_hash.key(values)
     binding.pry
-    sql = "SELECT * FROM #{self.table_name} WHERE '#{attribute}' = '#{attribute}'"
+    sql = "SELECT * FROM #{self.table_name} WHERE '#{attribute}' = '#{value}'"
     DB[:conn].execute(sql)
   end
 
