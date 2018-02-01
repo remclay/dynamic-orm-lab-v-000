@@ -54,7 +54,7 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute_hash)
-    value = attribute_hash.values[0]
+    value = attribute_hash.values.first
     binding.pry
     attribute = attribute_hash.key(values)
     sql = "SELECT * FROM #{self.table_name} WHERE '#{attribute}' = #{value}"
