@@ -54,6 +54,7 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute_hash)
+    binding.pry
     value = attribute_hash.values
     attribute = attribute_hash.key(values)
     binding.pry
