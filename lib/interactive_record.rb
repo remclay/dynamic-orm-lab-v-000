@@ -14,7 +14,6 @@ class InteractiveRecord
     sql = "PRAGMA table_info('#{table_name}')"
     table_info = DB[:conn].execute(sql)
     column_names = []
-    binding.pry
     table_info.each do |row|
       column_names << row["name"]
     end
